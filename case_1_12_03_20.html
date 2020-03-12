@@ -23,7 +23,7 @@
 
         <section class="formulario">
             <h2>Clientes</h2>
-            <form>
+            <form id="myform">
                 <label for="firstName" class="nombre">Nombre</label>
                 <input id="firstName" class="nombre" type="text" placeholder="Nombre"> <br><br>
 
@@ -31,26 +31,34 @@
                 <input id="direccion" class="direccion" type="text" placeholder="Direccion"><br><br>
 
                 <label for="telefono" class="telefono">Telefono</label>
-                <input id="telefono" class="telefono" type="text" placeholder="Telefono" pattern="[0-9]" maxlength="9">
+                <input id="telefono" class="telefono" type="text" placeholder="Telefono">
                 <br><br>
 
                 <div class="save">
-                    <button>
-                        Guardar
-                        <!--<input class="guardar" type="button" value="Guardar"> <br><br>
-                    -->
-                    </button>
+
+                    <input type="submit" value="Grabar">
                 </div>
 
             </form>
         </section>
 
         <footer class="pie">
-            � Marca Registrada
+
         </footer>
     </div>
     <script>
-        
+        document.getElementById("myform").addEventListener("submit", function (e) {
+            var firstName = document.getElementById("firstName").value;
+            var direccion = document.getElementById("direccion").value;
+            var telefono = document.getElementById("telefono").value;
+
+            var cliente = { firstName, direccion, telefono }
+
+            alert(JSON.stringify(cliente));
+
+            e.preventDefault();
+        });
+
     </script>
 </body>
 

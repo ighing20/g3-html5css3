@@ -23,10 +23,13 @@
             <h2>Clientes</h2>
             <form>
                 <label for="firstName" class="nombre">Nombre</label>
-                <input id="firstName"  class= "nombre" type="text"> <br><br>
+                <input id="firstName"  class= "nombre" type="text" placeholder="Nombre"> <br><br>
              
                 <label for="lastName" class="apellido">Apellido</label>
-                <input id="lastName" class="apellido" type="text"><br><br>
+                <input id="lastName" class="apellido" type="text" placeholder="Apellido"><br><br>
+
+                <label for="edad" class="edad">Edad</label>
+                <input id="edad"  class="edad" type="number" min="0"max ="80" step="1" placeholder="Edad"><br><br>
 
                 <label for="categoria" class ="categoria"> Categoria</label>
                     <select id="categoria" class ="categoria">
@@ -36,7 +39,7 @@
                     </select> <br><br>
 
                 <label for="telefono" class ="telefono">Telefono</label>
-                <input id="telefono" class ="telefono" type="text"> <br><br>
+                <input id="telefono" class ="telefono" type="text"placeholder="Telefono" pattern="[0-9]" maxlength="9" > <br><br>
 
                 <div class="save" >
                     <button>
@@ -50,7 +53,7 @@
         </section>
 
         <footer class="pie" >
-            © Marca Registrada
+            � Marca Registrada
         </footer>
     </div>
 

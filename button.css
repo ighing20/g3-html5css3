@@ -1,10 +1,5 @@
-.cuerpo{
-    border-radius: 30px 30px 30px 30px;
-    -moz-border-radius: 30px 30px 30px 30px;
-    -webkit-border-radius: 30px 30px 30px 30px;
-    border: 1px solid #172563;
 
-}
+
 .titulo{
     text-align: center; 
     font-family: Comic Sans MS; 
@@ -38,14 +33,6 @@
     background-color: #2175bc;
     color: #fff;
 }
-form {
-    overflow: hidden;
-    border-radius: 0px 0px 0px 0px;
-    -moz-border-radius: 0px 0px 0px 0px;
-    -webkit-border-radius: 0px 0px 0px 0px;
-    border: 1px solid #172563;
-    padding: 10px;
-}
  
 label {
     float: left;
@@ -53,33 +40,8 @@ label {
     padding-right: 24px;
 }
  
-input {
-    float: left;
-    width: calc(80% - 200px);
-}
-
-/*
-button {
-    float: right;
-    width: calc(100% - 200px);
-}
-*/
-.save  {
-    width: 100%;
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-   /* background-color: red;*/
-}
 
 button{}
-
-.guardar{
-    display: table-cell;
-    vertical-align: middle;
-    background-color: green;
-}
 
 .pie {
   text-align: center;
@@ -92,12 +54,6 @@ button{}
 select {
     float: left;
     width: calc(80% - 200px);
-}
-
-.formulario{
-    margin:0 auto 0 auto; 
-    width:390px;
-    
 }
 
 /* Add a black background color to the top navigation */
@@ -130,3 +86,16 @@ select {
   #salir{
       float: right;
   }
+
+
+  #container { border: 4px solid darkblue; border-radius: 25px; padding: 30px;
+    /*center the container*/ width: 960px; margin: 0 auto; }
+    #Name { /* For Later Use */ }
+    #Telefono { /* For Later Use */ }
+    #namesTable tr:nth-child(even) { background: dimgray;}
+    #namesTable tr:nth-child(odd) { background: lightgray;}
+    #namesTable th { margin-top: 50px; background: royalblue; }
+    #namesTable { width: 100%; border-collapse: separate; empty-cells: show; }
+    #namesTable tr { /*display:block;*/ min-height:20px; }
+    #counterDiv { float: right; padding-bottom: 10px; }
+    #counter { float: right; border: none; width: 30px; }

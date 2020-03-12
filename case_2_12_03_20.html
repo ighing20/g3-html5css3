@@ -24,13 +24,13 @@
         <section class="formulario">
             <h2>Clientes</h2>
             <form>
-                <div id="container"> 
-                    <div id="uiContainer">                     
-                        <table id="namesTable"> 
-                            <tr> 
-                                <th>Nombre</th> 
-                                <th>Direccion</th> 
-                                <th>Telefono</th> 
+                <div id="container">
+                    <div id="uiContainer">
+                        <table id="namesTable">
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Direccion</th>
+                                <th>Telefono</th>
                             </tr>
                         </table>
                     </div>
@@ -45,7 +45,33 @@
         </footer>
     </div>
     <script>
+        window.onload = function () {
+            var tabla = document.getElementById("namesTable");
 
+
+            var clientes = [{ "nombre": "Juan", "direccion": "jiron calloma", "telefono": "685985485" },
+            { "nombre": "peres", "direccion": "jiron tuesla", "telefono": "5643566876" },
+            { "nombre": "uriel", "direccion": "jiron 4 de diciembre", "telefono": "965863554" }];
+
+            clientes.forEach(function (e) {
+                var tr = document.createElement("tr");
+                var nombre = document.createElement("td");
+                var direccion = document.createElement("td");
+                var telefono = document.createElement("td");
+
+                nombre.innerHTML = e.nombre;
+                direccion.innerHTML = e.direccion;
+                telefono.innerHTML = e.telefono;
+
+                tr.appendChild(nombre);
+                tr.appendChild(direccion);
+                tr.appendChild(telefono);
+
+                tabla.appendChild(tr)
+            })
+
+            document.getElementById("counter").value = clientes.length;
+        }
     </script>
 </body>
 

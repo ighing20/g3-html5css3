@@ -6,6 +6,8 @@
     <title>IGH SOFT</title>
     <link rel="stylesheet" type="text/css" href="button.css">
     <meta name="viewport" content="width = device-width, initial-scale =1">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" type="text/css">
+  
 </head>
 
 <body>
@@ -35,8 +37,10 @@
                 <br><br>
 
                 <div class="save">
-
-                    <input type="submit" value="Grabar">
+                    <button type="submit" id="grabar">Grabar</button>
+                    <div id="pruebadialog" title="Basic dialog">
+                    <div id="resultado"></div>
+                      </div>
                 </div>
 
             </form>
@@ -46,18 +50,31 @@
 
         </footer>
     </div>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script>
-        document.getElementById("myform").addEventListener("submit", function (e) {
-            var firstName = document.getElementById("firstName").value;
-            var direccion = document.getElementById("direccion").value;
-            var telefono = document.getElementById("telefono").value;
+
+        $("#grabar").on("click", function (e) {
+            //var firstName = document.getElementById("firstName").value;
+            var firstName = $("#firstName").val();
+            var direccion = $("#direccion").val();
+            var telefono = $("#telefono").val();
 
             var cliente = { firstName, direccion, telefono }
 
-            alert(JSON.stringify(cliente));
+            //alert(JSON.stringify(cliente));
+            $("#resultado").html(JSON.stringify(cliente));
+            $("#pruebadialog").dialog();
+            //$( "#dialog" ).dialog();
+
 
             e.preventDefault();
         });
+
+
+        
 
     </script>
 </body>

@@ -1,6 +1,5 @@
-
-    window.onload = function () {
-        var tabla = document.getElementById("namesTable");
+$(document).ready(function(){
+    var tabla = document.getElementById("namesTable");
         var clientes = [{ "nombre": "Juan", "direccion": "jiron calloma", "telefono": "685985485" },
         { "nombre": "peres", "direccion": "jiron tuesla", "telefono": "5643566876" },
         { "nombre": "uriel", "direccion": "jiron 4 de diciembre", "telefono": "965863554" }];
@@ -32,4 +31,5 @@
         })
 
         document.getElementById("counter").value = clientes.length;
-    }
+})
+

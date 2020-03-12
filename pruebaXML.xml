@@ -1,4 +1,10 @@
 <main>
-    <client> Juan </client>
-    <client>
+    <contenido>
+        <![CDATA[
+            <html>
+                <h1> Hola mundo </h1>
+                <h2> Hola mundo <h2>
+            </html>
+        ]]>
+    </contenido>
 </main>
